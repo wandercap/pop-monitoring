@@ -1,0 +1,84 @@
+PR:
+    PR->MS->RS->SP
+    4 3 1
+SP:
+    SP->PR->SC->RJ->MG->CE
+    0 2 11 14 20
+SC: 
+    SC->SP->RS
+    1 3
+RS: 200.132.0.134
+    RS->PR->SC
+    0 2
+MS:
+    MS->PR->MT
+    0 5
+MT:
+    MT->GO->RO
+    8 6
+RO:
+    RO->MT->AC
+    5 7
+AC:
+    AC->RO
+    6
+GO:
+    GO->MT->DF
+    5 10
+TO:
+    TO->GO->PA
+    8 22
+DF:
+    DF->GO->MG->RJ->CE->PA
+    8 14 11 20 22
+RJ:
+    RJ->DF->SP->ES
+    10 1 16
+RR:
+    RR->AM
+    13
+AM:
+    AM->DF->PA->RR
+    10 22 12
+MG:
+    MG->DF->CE->BA->SP
+    10 20 15 1
+BA:
+    BA->MG->ES->SE->PE
+    14 16 17 24
+ES:
+    ES->BA->RJ
+    15 11
+SE:
+    SE->BA->AL
+    15 19
+AP:
+    AP->PA
+    22
+AL:
+    AL->SE->PE
+    17 24
+CE:
+    CE->MG->MA->PE->RN->SP->DF
+    14 21 24 27 1 10
+MA:
+    MA->CE->PA
+    20 22
+PA:
+    PA->MA->AP->PI->AM->TO
+    21 18 23 13 9
+PI:
+    PI->PA->PE
+    22 24
+PE:
+    PE->PI->AL->BA->PB-CGE
+    23 19 15 25
+PB-CGE:
+    PB-CGE->PB-JPA->PE
+    26 24
+PB-JPA:
+    PB-JPA->RN->PB-CGE
+    27 25
+RN:
+    RN->CE->PB-JPA
+    20 26

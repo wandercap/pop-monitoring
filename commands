@@ -1,0 +1,13 @@
+1- Idêntificar a interface de rede
+$ sudo ifconfig
+    - No meu caso é enp4s0
+
+2- Adicionar um alias para cada enlace
+$ sudo ifconfig enp4s0:1 200.133.192.97 (POP-SC)
+$ sudo ifconfig enp4s0:2 200.133.192.97 (POP-SP)
+
+3- Adicionar a rota
+$ sudo ip route add 200.237.192.33 via 200.133.192.97
+
+4- Para deletar a rota para o POP-SC
+$ sudo route del 200.237.192.33
